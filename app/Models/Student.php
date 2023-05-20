@@ -11,4 +11,9 @@ class Student extends Model
     protected $table = 'student';
     public $timestamps = false;
     protected $primaryKey = 'stud_no';
+
+    public function personalities()
+    {
+        return $this->hasMany(Personality::class, 'stud_no');
+    }
 }
