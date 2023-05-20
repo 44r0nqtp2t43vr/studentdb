@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/personalities/{id}', [StudentController::class, 'getPersonality']);
+
 /**
  * Alunan Routes
  */
 Route::get('/students', [StudentController::class, 'getStudents']);
 // Route::get('/studentlms/{id}', [StudentController::class, 'getStudentLMSUsage']);
+
