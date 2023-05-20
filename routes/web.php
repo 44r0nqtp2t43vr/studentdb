@@ -18,3 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/personalities/{id}', [StudentController::class, 'getPersonality']);
+
+/**
+ * Alunan Routes
+ */
+Route::get('/students', [StudentController::class, 'getStudents']);
+// Route::get('/studentlms/{id}', [StudentController::class, 'getStudentLMSUsage']);
+

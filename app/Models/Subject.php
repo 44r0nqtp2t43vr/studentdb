@@ -11,4 +11,9 @@ class Subject extends Model
     protected $table = 'subject';
     public $timestamps = false;
     protected $primaryKey = 'subj_no';
+
+    public function offers()
+    {
+        return $this->hasMany(Offer::class, 'subj_no');
+    }
 }
