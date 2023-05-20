@@ -11,4 +11,9 @@ class Personality extends Model
     protected $table = 'personality';
     public $timestamps = false;
     protected $primaryKey = 'stud_no';
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class, 'stud_no');
+    }
 }

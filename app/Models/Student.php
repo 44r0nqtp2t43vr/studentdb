@@ -11,7 +11,7 @@ class Student extends Model
     protected $table = 'student';
     public $timestamps = false;
     protected $primaryKey = 'stud_no';
-
+  
     public function usage()
     {
         return $this->hasOne(LMSUsage::class);
@@ -26,4 +26,5 @@ class Student extends Model
     {
         return $this->belongsToMany(Offer::class, 'student_offer', 'stud_no');
     }
+
 }
