@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Alunan Routes
+ */
+Route::get('/students', [StudentController::class, 'getStudents']);
+// Route::get('/studentlms/{id}', [StudentController::class, 'getStudentLMSUsage']);
