@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\LMSUsageController;
+use App\Http\Controllers\PersonalityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +20,11 @@ Route::get('/', function () {
 });
 
 Route::get('/personalities/{id}', [StudentController::class, 'getPersonality']);
+// Route::get('/studentlms/{id}', [StudentController::class, 'getStudentLMSUsage']);
 
 /**
  * Alunan Routes
  */
 Route::get('/students', [StudentController::class, 'getStudents']);
-// Route::get('/studentlms/{id}', [StudentController::class, 'getStudentLMSUsage']);
-
+Route::get('/lmsusage', [LMSUsageController::class, 'getLMSUsage']);
+Route::get('/personality', [PersonalityController::class, 'getPersonality']);
